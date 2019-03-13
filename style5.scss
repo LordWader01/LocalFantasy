@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+
+:root{
+    --width-cont: 1000px;
+}
+
+body{
+    background-color: lightgreen;
+}
+
+#mainCont{
+    display: flex;
+    max-width: var(--width-cont);
+}
+
+%equal-dimension {
+    border: 1px solid black;
+}
+  
+.pane{
+    width: var(--width-cont);
+    @extend %equal-dimension;
+}

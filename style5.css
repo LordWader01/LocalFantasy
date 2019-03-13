@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+
+:root{
+    --width-cont: 1000px;
+}
+
+body{
+    background-color: lightgreen;
+}
+
+#mainCont{
+    display: flex;
+    max-width: var(--width-cont);
+    justify-content: right;
+    border: 1px solid red;
+    margin: 20px;
+}
+
+.pane{
+    flex: 1 1 100px;
+    border: 1px solid black;
+    min-height: 700px;
+}
+
+#field{
+    background: url(img/pitch2.png) no-repeat center;
+    flex: 6 1 100px;
+}
