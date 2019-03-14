@@ -25,6 +25,7 @@ body{
 }
 
 #field{
+    display: flex;
     background: url(img/pitch2.png) no-repeat center;
     flex: 6 1 100px;
 }
