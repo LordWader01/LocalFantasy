@@ -16,16 +16,36 @@ body{
     justify-content: right;
     border: 1px solid red;
     margin: 20px;
+    transition: flex-basis 1s linear; 
 }
 
-.pane{
+.dobro{
     flex: 1 1 100px;
     border: 1px solid black;
     min-height: 700px;
+
 }
 
-#field{
+#fieldShow{
     display: flex;
     background: url(img/pitch2.png) no-repeat center;
-    flex: 6 1 100px;
+    flex-direction: column;
+    /* flex: 1 1 100px; */
+    /* transition: flex-basis 1s linear;  */
+}
+
+.field{
+    display: flex;
+    flex: 2 1 200px;
+    transition: flex-basis 1s linear; 
+}
+
+.fieldPosition{
+    display: flex;
+    flex: 1;
+}
+
+.detalPosition{
+    border: darkblue 1px solid;
+    flex: 1;
 }
