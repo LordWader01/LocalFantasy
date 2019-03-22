@@ -13,31 +13,25 @@ body{
 #mainCont{
     display: flex;
     max-width: var(--width-cont);
-    justify-content: right;
+    /* flex-wrap: wrap; */
+    /* justify-content: right; */
     border: 1px solid red;
     margin: 20px;
     transition: flex-basis 1s linear; 
 }
 
-.dobro{
-    flex: 1 1 100px;
+.userPane{
+    flex: 1 1 300px;
     border: 1px solid black;
     min-height: 700px;
     justify-content: center;
 
 }
 
-#fieldShow{
+.fieldPane{
     display: flex;
+    flex: 2 1 400px;
     background: url(img/pitch2.png) no-repeat center;
-    flex-direction: column;
-    /* flex: 1 1 100px; */
-    /* transition: flex-basis 1s linear;  */
-}
-
-.field{
-    display: flex;
-    flex: 2 1 200px;
     transition: flex-basis 1s linear; 
 }
 
