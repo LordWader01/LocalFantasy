@@ -7,10 +7,10 @@ for (let index = 1; index < 25; index++) {
     allTilesOfFootballField.push(document.getElementById(`tile${index}`));
 }
 
-fild.addEventListener('mouseover', function(){
-    this.classList.remove("dobro"); 
-    this.classList.add("field"); 
-});
+// fild.addEventListener('mouseover', function(){
+//     this.classList.remove("dobro"); 
+//     this.classList.add("field"); 
+// });
 
 //function what any specifik tactic makes
 const changeTac = function (...param) {
