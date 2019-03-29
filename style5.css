@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root{
@@ -12,60 +12,62 @@ body{
 
 #mainCont{
     display: flex;
-    flex-flow: column;
     max-width: var(--width-cont);
+    flex-wrap: wrap;
+    /* justify-content: right; */
     border: 1px solid red;
     margin: 20px;
     transition: flex-basis 1s linear; 
 }
 
-.dobro{
-    flex: 1 3 100px;
+.userPane{
+    flex: 1 1 300px;
     border: 1px solid black;
     min-height: 700px;
     justify-content: center;
+
 }
 
-@media screen and (min-width: 768px){
-        
-    #mainCont{
-        flex-flow: row;
-    }
+.fieldPane{
+    display: flex;
+    flex: 2 1 360px;
+    flex-flow: column;
+    background: url(img/pitch2.png) no-repeat center;
+    min-height: 700px;
+    transition: flex-basis 1s linear; 
+}
 
-    #fieldShow{
-        display: flex;
-        background: url(img/pitch2.png) no-repeat center;
-        flex-direction: column;
-        /* flex: 1 1 100px; */
-        /* transition: flex-basis 1s linear;  */
-    }
-    
-    .field{
-        display: flex;
-        flex: 2 1 200px;
-        transition: flex-basis 1s linear; 
-    }
-    
-    .fieldPosition{
-        display: flex;
-        flex: 1;
-    }
-    
-    .detalPosition{
-        border: darkblue 1px solid;
-        flex: 1;
-    }
-    
-    p{
-        flex: 1;
-        text-align: center; 
-    }
-    
-    select[name="Tactic"]{
-        flex: 1;
-        text-align: center;
-        border: green solid 1px;
-    }
+.fieldPosition{
+    display: flex;
+    flex: 1;
+}
 
+.detalPosition{
+    display: flex;
+    border: darkblue 1px solid;
+    flex: 1;
+    align-items: center;
+    justify-content: right;
+}
 
+.player{
+    display: flex; 
+    justify-content: center;
+    flex: 1;
+}
+
+input[type=text]{
+    width: 50px;
+    text-align: center; 
+}
+
+p{
+    flex: 1;
+    text-align: center; 
+}
+
+select[name="Tactic"]{
+    flex: 1;
+    text-align: center;
+    border: green solid 1px;
 }

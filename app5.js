@@ -24,24 +24,22 @@ const changeTac = function (...param) {
 
     for (let indx = 0; indx < allTilesOfFootballField.length; indx++) {
         if (chosenTiles.indexOf(allTilesOfFootballField[indx].id)!==-1) {
-            allTilesOfFootballField[indx].style.display = "none"
+            allTilesOfFootballField[indx].style.display = "";
         }
     }         
 }
 
 
 selekt.addEventListener('change',function(){
-    for (const tile of allTilesOfFootballField) {
-        tile.style.visibility = "visible";
-    }
-    //after choice a tactic switch off disabled
-    // [].forEach.call(inputs, element => {
-    //     element.disabled = false;
-    // });
+    // let tilesNumber = [];
+
+    allTilesOfFootballField.forEach(el=>{
+        el.style.display = "none";
+    }) 
 
     switch (this.value) {
         case "442":
-            changeTac(2, 5, 6, 7, 8, 9, 12, 15, 16, 17, 18, 19, 20, 22, 24);
+            changeTac(1, 6, 7, 8, 9,  11, 12, 13, 14, 17, 18);
             break;
         case "41212":
             changeTac(1, 6, 7, 8, 9, 12, 14, 15, 16, 18, 19, 20, 22, 24);
