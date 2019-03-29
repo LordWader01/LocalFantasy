@@ -7,25 +7,31 @@
     <title>Zastosowania tego czego się nauczyłem</title>
     <link rel="stylesheet" href="style5.css" type="text/css">
     <script src="app5.js" defer></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
 </head>
 <body>
     
     <div id="mainCont">
         <div class="userPane">
             <p>Wybierz taktyke man</p>
-            <select name="Tactic" id="Taktyka">
-                <option value="442">4-4-2</option>
-                <option value="41212">4-1-2-1-2</option>
-                <option value="433">4-3-3</option>
-                <option value="451">4-5-1</option>
-                <option value="352">3-5-2</option>
-            </select>
-            
+            <div class="selekt">
+                <select name="Tactic" id="Taktyka">
+                    <option value="442">4-4-2</option>
+                    <option value="4312">4-3-1-2</option>
+                    <option value="433">4-3-3</option>
+                    <option value="4231">4-2-3-1</option>
+                    <option value="352">3-5-2</option>
+                </select>
+            </div>    
         </div>
         <div class="fieldPane">
             <div class="fieldPosition">
                 <div class="detalPosition" id="tile1">
-                    <div class="player" id="first">
+                    <div class="player" >
                         <input type="text" placeholder="Goalkeeper" />
                     </div>
                 </div>
@@ -36,51 +42,111 @@
             </div>
             <div class="fieldPosition">
                 <div class="detalPosition" id="tile6">
-                    <div class="player" id="first">
+                    <div class="player" >
                         <input type="text" placeholder="Back" />
                     </div>
                 </div>
                 <div class="detalPosition" id="tile7">
-                    <div class="player" id="first">
+                    <div class="player" >
                         <input type="text" placeholder="Back" />
                     </div>
                 </div>
                 <div class="detalPosition" id="tile8">
-                    <div class="player" id="first">
+                    <div class="player" >
                         <input type="text" placeholder="Back" />
                     </div>
                 </div>
                 <div class="detalPosition" id="tile9">
-                    <div class="player" id="first">
+                    <div class="player" >
                         <input type="text" placeholder="Back" />
                     </div>
                 </div>
                 <div class="detalPosition" id="tile10">
-                    <div class="player" id="first">
+                    <div class="player" >
                         <input type="text" placeholder="Back" />
                     </div>
                 </div>
             </div>
             <div class="fieldPosition">
-                <div class="detalPosition" id="tile11"></div>
-                <div class="detalPosition" id="tile12"></div>
-                <div class="detalPosition" id="tile13"></div>
-                <div class="detalPosition" id="tile14"></div>
-                <div class="detalPosition" id="tile15"></div>
+                <div class="detalPosition" id="tile11">
+                    <div class="player" >
+                        <input type="text" placeholder="middle" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile12">
+                    <div class="player" >
+                        <input type="text" placeholder="middle" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile13">
+                    <div class="player" >
+                        <input type="text" placeholder="middle" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile14">
+                    <div class="player" >
+                        <input type="text" placeholder="middle" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile15">
+                    <div class="player" >
+                        <input type="text" placeholder="middle" />
+                    </div>
+                </div>
             </div>
             <div class="fieldPosition">
-                <div class="detalPosition" id="tile16"></div>
-                <div class="detalPosition" id="tile17"></div>
-                <div class="detalPosition" id="tile18"></div>
-                <div class="detalPosition" id="tile19"></div>
-                <div class="detalPosition" id="tile20"></div>
+                <div class="detalPosition" id="tile16">
+                    <div class="player" >
+                        <input type="text" placeholder="middleOffensive" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile17">
+                    <div class="player" >
+                        <input type="text" placeholder="middleOffensive" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile18">
+                    <div class="player" >
+                        <input type="text" placeholder="middleOffensive" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile19">
+                    <div class="player" >
+                        <input type="text" placeholder="middleOffensive" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile20">
+                    <div class="player" >
+                        <input type="text" placeholder="middleOffensive" />
+                    </div>
+                </div>
             </div>
             <div class="fieldPosition">
-                <div class="detalPosition" id="tile21"></div>
-                <div class="detalPosition" id="tile22"></div>
-                <div class="detalPosition" id="tile23"></div>
-                <div class="detalPosition" id="tile24"></div>
-                <div class="detalPosition" id="tile25"></div>
+                <div class="detalPosition" id="tile21">
+                    <div class="player" >
+                        <input type="text" placeholder="attacker" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile22">
+                    <div class="player" >
+                        <input type="text" placeholder="attacker" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile23">
+                    <div class="player" >
+                        <input type="text" placeholder="attacker" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile24">
+                    <div class="player" >
+                        <input type="text" placeholder="attacker" />
+                    </div>
+                </div>
+                <div class="detalPosition" id="tile25">
+                    <div class="player" >
+                        <input type="text" placeholder="attacker" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>

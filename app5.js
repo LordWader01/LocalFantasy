@@ -1,18 +1,14 @@
 const fild = document.querySelector("#fieldShow");
 const selekt = document.querySelector('select');
+let inputs = document.querySelectorAll('input');
 let allTilesOfFootballField = [];
 
 //push elements to table allTiles
-for (let index = 1; index < 25; index++) {
+for (let index = 1; index <= 25; index++) {
     allTilesOfFootballField.push(document.getElementById(`tile${index}`));
 }
 
-// fild.addEventListener('mouseover', function(){
-//     this.classList.remove("dobro"); 
-//     this.classList.add("field"); 
-// });
-
-//function what any specifik tactic makes
+//func to choose tactic
 const changeTac = function (...param) {
     let chosenTiles = [];
     let leng = 0;
@@ -29,52 +25,89 @@ const changeTac = function (...param) {
     }         
 }
 
+//func to set displa: none for all tiles from the field
+const disapperAllTiles = function(){
+    allTilesOfFootballField.forEach(el=>{
+        el.style.display = "none";
+    }) 
+}
+
+//checks if object is iterable and the object is iterable if he has iterator() method
+const  isIterable = function(obj) {
+    // checks for null and undefined
+    if (obj == null) {
+      return false;
+    }
+    return typeof obj[Symbol.iterator] === 'function';
+}
+
+//return boolen var if element is active or not
+let isActive = function(element){
+    return document.activeElement === element;
+}
+
+//save choice of user when he clicks enter key
+const saveChoice = function(elmts){
+    if(isIterable(elmts)){    
+        for (const inpt of elmts) {
+            inpt.addEventListener('keypress', function (e) {
+                    let key = e.which || e.keyCode;
+                    if (key === 13) { // 13 is enter, check if user clicked enter 
+                            if (isActive(inpt) && elmts.name != "userName") {
+                                let inptVal = inpt.value;
+                                inpt.style.display = "none";
+                                inpt.parentElement.innerHTML = `<p>${inptVal}</p>`;
+                            
+                        }
+                    }
+            });
+        }
+    }
+    else{
+        elmts.addEventListener('keypress', function (e) {
+            let key = e.which || e.keyCode;
+            if (key === 13) { // 13 is enter, check if user clicked enter                  
+                    if (isActive(elmts)) {
+                        let inptVal = elmts.value;
+                        elmts.style.display = "none";
+                        elmts.parentElement.innerHTML = `<p>${inptVal}</p>`;
+                    
+                }
+            }
+        });
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    //set 4-4-2 tactic by default
+    disapperAllTiles();
+    changeTac(1, 6, 7, 8, 9, 11, 12, 13, 14, 17, 18);
+
+});
+
 
 selekt.addEventListener('change',function(){
     // let tilesNumber = [];
 
-    allTilesOfFootballField.forEach(el=>{
-        el.style.display = "none";
-    }) 
+    disapperAllTiles();
 
     switch (this.value) {
         case "442":
-            changeTac(1, 6, 7, 8, 9,  11, 12, 13, 14, 17, 18);
+            changeTac(1, 6, 7, 8, 9, 11, 12, 13, 14, 17, 18);
             break;
-        case "41212":
-            changeTac(1, 6, 7, 8, 9, 12, 14, 15, 16, 18, 19, 20, 22, 24);
+        case "4312":
+            changeTac(1, 6, 7, 8, 9, 12, 14, 15, 16, 22, 24);
             break;
         case "433":
-            changeTac(2, 5, 6, 7, 8, 9, 10, 14, 15, 16, 17, 18, 19, 20, 24);
+            changeTac(1, 6, 7, 8, 9, 11, 12, 13, 16, 17, 18);
             break;
-        case "451":
-            changeTac(2, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 20, 21, 23, 24);
+        case "4231":
+            changeTac(1, 6, 7, 8, 9, 11, 12, 16, 17, 18, 21);
             break;
         case "352":
-            changeTac(0, 4, 5, 6, 7, 8, 9, 15, 16, 17, 18, 19, 20, 22, 24);
-        default:
-            console.log('Nie wiem ile równa się numer');
+            changeTac(1, 6, 7, 8, 11, 12, 13, 14, 15, 16, 17);
     }
 });
 
-
-
-// fild.addEventListener('mouseout', function(){
-//     this.classList.remove("field"); 
-//     this.classList.add("dobro"); 
-// });
-    
-
-
-/*
-fild.addEventListener('mouseout', function(){
-       this.style.setProperty("flex","6 1 100px");
-});
-
-$("a.stack").on("click", ()=>{
-    element.classList.add("stack"); 
-  });
-  $("a.grid").on("click", ()=>{
-    element.classList.remove("stack"); 
-  });
-*/
+saveChoice(inputs);

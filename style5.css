@@ -20,12 +20,20 @@ body{
     transition: flex-basis 1s linear; 
 }
 
+.selekt{
+    display: flex;
+    justify-content: center; 
+    flex: 1; 
+    /* border: 1px green solid; */
+    padding: 5px;
+}
+
 .userPane{
     flex: 1 1 300px;
     border: 1px solid black;
-    min-height: 700px;
-    justify-content: center;
-
+    /* min-height: 700px; */
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .fieldPane{
@@ -44,10 +52,11 @@ body{
 
 .detalPosition{
     display: flex;
-    border: darkblue 1px solid;
+    /* border: darkblue 1px solid; */
     flex: 1;
     align-items: center;
     justify-content: right;
+    font-weight: bold;	
 }
 
 .player{
@@ -57,7 +66,7 @@ body{
 }
 
 input[type=text]{
-    width: 50px;
+    width: 70px;
     text-align: center; 
 }
 
